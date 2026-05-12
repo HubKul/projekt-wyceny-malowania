@@ -26,7 +26,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         <div className="max-w-5xl mx-auto flex justify-between items-center text-white">
           <Link href="/dashboard" className="text-2xl font-bold font-serif">Panel Klienta</Link>
           <div className="flex items-center gap-4">
-            <span className="hidden sm:inline text-orange-50">Witaj, {email}</span>
+            <span className="hidden sm:inline text-orange-50">Witaj, {}</span>
             <button onClick={logout} className="text-orange-100 hover:text-white transition-colors bg-orange-600/50 hover:bg-orange-600 px-3 py-1.5 rounded-lg flex items-center gap-2 cursor-pointer">
               <LogOut className="w-4 h-4" /> <span className="hidden sm:inline">Wyloguj się</span>
             </button>
