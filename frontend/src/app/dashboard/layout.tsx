@@ -7,7 +7,7 @@ import Link from "next/link";
 import { LogOut } from "lucide-react";
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
-  const { isAuthenticated, role, logout, email } = useAuth();
+  const { isAuthenticated, role, logout} = useAuth();
   const router = useRouter();
 
   useEffect(() => {
