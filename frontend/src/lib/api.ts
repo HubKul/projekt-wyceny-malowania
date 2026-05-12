@@ -3,10 +3,9 @@ export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 export async function fetchApi(endpoint: string, options: RequestInit = {}) {
   const token = typeof window !== 'undefined' ? localStorage.getItem('token') : null;
   
-  const headers: HeadersInit = {
-    'Content-Type': 'application/json',
-    ...options.headers,
-  };
+  const headers: Record<string, string> = {
+  'Content-Type': 'application/json',
+};
 
   if (token) {
     headers['Authorization'] = `Token ${token}`;
