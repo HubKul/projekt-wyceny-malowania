@@ -65,7 +65,7 @@ export default function Dashboard() {
                           {estimation.inquiry_status}
                         </div>
                         <div className="font-bold text-gray-900 tabular-nums text-lg">
-                          ${estimation.final_updated_amount || estimation.calculated_amount}
+                          PLN {estimation.final_updated_amount || estimation.calculated_amount}
                         </div>
                       </div>
                     )}
