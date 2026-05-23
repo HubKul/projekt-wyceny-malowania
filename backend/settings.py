@@ -4,7 +4,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-1_j@a7h+m(ah@kb#cilnd&442-po-if$=21yg5_-=x-b^%7yyj')
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
@@ -98,4 +98,4 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-SECRET_COMPANY_CODE = os.environ.get('SECRET_COMPANY_CODE', 'EMPLOYEE123')
+SECRET_COMPANY_CODE = os.environ.get('SECRET_COMPANY_CODE', '')
