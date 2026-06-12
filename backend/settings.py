@@ -8,7 +8,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '127.0.0.1,localhost').split(',')
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '127.0.0.1,localhost,wycena-malowania-backend.onrender.com').split(',')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -43,7 +43,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = os.environ.get('CORS_ALLOWED_ORIGINS', 'http://localhost:3000').split(',')
+CORS_ALLOWED_ORIGINS = os.environ.get('CORS_ALLOWED_ORIGINS', 'http://localhost:3000,https://projekt-wyceny-malowania.vercel.app').split(',')
 
 ROOT_URLCONF = 'backend.urls'
 
