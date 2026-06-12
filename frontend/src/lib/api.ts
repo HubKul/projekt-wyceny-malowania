@@ -1,17 +1,20 @@
-export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
+export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "";
 
 export async function fetchApi(endpoint: string, options: RequestInit = {}) {
-  const token = typeof window !== 'undefined' ? localStorage.getItem('token') : null;
+  const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
   
   const headers: Record<string, string> = {
-  'Content-Type': 'application/json',
+  "Content-Type": "application/json",
 };
 
   if (token) {
-    headers['Authorization'] = `Token ${token}`;
+    headers["Authorization"] = `Token ${token}`;
   }
 
-  const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+  const baseUrl = API_BASE_URL.replace(/\/+$/, "");
+  const path = endpoint.replace(/^\/+/, "");
+
+  const response = await fetch(`${baseUrl}/${path}`, {
     ...options,
     headers,
   });
